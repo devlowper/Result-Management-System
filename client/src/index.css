@@ -307,8 +307,14 @@ body {
   border-bottom: 1px solid #f1f4f8;
   transition: background .12s;
 }
+.result-tbl tbody tr:nth-child(odd) {
+  background: #ffffff;
+}
+.result-tbl tbody tr:nth-child(even) {
+  background: #f3f4f6;
+}
 .result-tbl tbody tr:last-child { border-bottom: none; }
-.result-tbl tbody tr:hover { background: #f9fafb; }
+.result-tbl tbody tr:hover { background: #e5e7eb; }
 
 .result-tbl td {
   padding: 0.7rem 0.875rem;

@@ -146,7 +146,7 @@ export default function App() {
 
             {/* Print-only university header */}
             <div className="print-header">
-              <h2>Daffodil International University</h2>
+              <h2>Metropolitan University</h2>
               <p>Semester Result — {result.semester}</p>
             </div>
 
