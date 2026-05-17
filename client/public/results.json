@@ -1,0 +1,50 @@
+[
+  {
+    "id": "0242320005101821",
+    "roll": "232-15-821",
+    "name": "Sakibul Islam",
+    "batch": "65",
+    "department": "B.Sc. in Computer Science & Engineering",
+    "semester": "Spring 2026, 261",
+    "sgpa": 4.00,
+    "courses": [
+      { "sl": 1, "code": "CSE323", "title": "Operating Systems",           "credit": 3.00, "grade": "A+", "point": 4.00 },
+      { "sl": 2, "code": "CSE324", "title": "Operating Systems Lab",        "credit": 1.50, "grade": "A+", "point": 4.00 },
+      { "sl": 3, "code": "CSE328", "title": "Introduction to Data Science", "credit": 3.00, "grade": "A+", "point": 4.00 },
+      { "sl": 4, "code": "CSE315", "title": "Software Engineering",         "credit": 3.00, "grade": "A+", "point": 4.00 },
+      { "sl": 5, "code": "CSE316", "title": "Artificial Intelligence",      "credit": 3.00, "grade": "A+", "point": 4.00 }
+    ]
+  },
+  {
+    "id": "0242320005101822",
+    "roll": "232-15-822",
+    "name": "Rafiqul Hasan",
+    "batch": "65",
+    "department": "B.Sc. in Computer Science & Engineering",
+    "semester": "Spring 2026, 261",
+    "sgpa": 3.75,
+    "courses": [
+      { "sl": 1, "code": "CSE323", "title": "Operating Systems",           "credit": 3.00, "grade": "A",  "point": 3.75 },
+      { "sl": 2, "code": "CSE324", "title": "Operating Systems Lab",        "credit": 1.50, "grade": "A+", "point": 4.00 },
+      { "sl": 3, "code": "CSE328", "title": "Introduction to Data Science", "credit": 3.00, "grade": "A",  "point": 3.75 },
+      { "sl": 4, "code": "CSE315", "title": "Software Engineering",         "credit": 3.00, "grade": "B+", "point": 3.25 },
+      { "sl": 5, "code": "CSE316", "title": "Artificial Intelligence",      "credit": 3.00, "grade": "A",  "point": 3.75 }
+    ]
+  },
+  {
+    "id": "0242320005101823",
+    "roll": "232-15-823",
+    "name": "Nusrat Jahan",
+    "batch": "65",
+    "department": "B.Sc. in Computer Science & Engineering",
+    "semester": "Spring 2026, 261",
+    "sgpa": 3.50,
+    "courses": [
+      { "sl": 1, "code": "CSE323", "title": "Operating Systems",           "credit": 3.00, "grade": "B+", "point": 3.25 },
+      { "sl": 2, "code": "CSE324", "title": "Operating Systems Lab",        "credit": 1.50, "grade": "A",  "point": 3.75 },
+      { "sl": 3, "code": "CSE328", "title": "Introduction to Data Science", "credit": 3.00, "grade": "A",  "point": 3.75 },
+      { "sl": 4, "code": "CSE315", "title": "Software Engineering",         "credit": 3.00, "grade": "B+", "point": 3.25 },
+      { "sl": 5, "code": "CSE316", "title": "Artificial Intelligence",      "credit": 3.00, "grade": "B+", "point": 3.25 }
+    ]
+  }
+]

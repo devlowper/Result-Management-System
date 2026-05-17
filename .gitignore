@@ -1,0 +1,32 @@
+# Node
+node_modules/
+npm-debug.log*
+yarn-error.log*
+
+# Build
+dist/
+build/
+.next/
+
+# Env
+.env
+.env.local
+.env.production
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Puppeteer
+.local-chromium/
+
+# Logs
+logs/
+*.log
+
+# Docker volumes
+mongo1_data/
+mongo2_data/
+mongo3_data/
+redis_data/
+minio_data/
