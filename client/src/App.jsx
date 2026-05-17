@@ -37,10 +37,16 @@ export default function App() {
 
     setTimeout(() => {
       const q = searchQuery.trim().toLowerCase();
+      const qClean = q.replace(/-/g, ''); // strip hyphens for flexible search
       const found = allResults.find(
         (s) =>
           s.semester === selectedSemester &&
-          (s.roll?.toLowerCase() === q || s.id?.toLowerCase() === q)
+          (
+            s.roll?.toLowerCase() === q ||
+            s.id?.toLowerCase() === q ||
+            s.roll?.toLowerCase().replace(/-/g, '') === qClean ||
+            s.id?.toLowerCase().replace(/-/g, '') === qClean
+          )
       );
       setResult(found || null);
       setSearched(true);
@@ -53,6 +59,25 @@ export default function App() {
     ? result.courses.reduce((sum, c) => sum + (c.credit ?? 0), 0)
     : 0;
 
+  // Format semester code into human readable text if needed
+  const formatSemester = (sem) => {
+    const semMap = {
+      '11': '1st Year 1st Semester',
+      '12': '1st Year 2nd Semester',
+      '13': '1st Year 3rd Semester',
+      '21': '2nd Year 1st Semester',
+      '22': '2nd Year 2nd Semester',
+      '23': '2nd Year 3rd Semester',
+      '31': '3rd Year 1st Semester',
+      '32': '3rd Year 2nd Semester',
+      '33': '3rd Year 3rd Semester',
+      '41': '4th Year 1st Semester',
+      '42': '4th Year 2nd Semester',
+      '43': '4th Year 3rd Semester',
+    };
+    return semMap[sem] || sem;
+  };
+
   // Colour helper for grade chips
   const gradeColor = (grade = '') => {
     const g = grade.toUpperCase();
@@ -63,7 +88,7 @@ export default function App() {
   };
 
   // Safe display helpers
-  const displayName = result?.name?.trim() ? result.name : 'No Name';
+  const displayName = result?.name?.trim() ? result.name : 'No Name Found';
 
   return (
     <div className="app-root">
@@ -98,7 +123,7 @@ export default function App() {
                   onChange={(e) => setSelectedSemester(e.target.value)}
                 >
                   {semesters.map((s) => (
-                    <option key={s} value={s}>{s}</option>
+                    <option key={s} value={s}>{formatSemester(s)}</option>
                   ))}
                 </select>
                 <ChevronDown size={15} className="select-chevron" />
@@ -147,7 +172,7 @@ export default function App() {
             {/* Print-only university header */}
             <div className="print-header">
               <h2>Metropolitan University</h2>
-              <p>Semester Result — {result.semester}</p>
+              <p>Semester Result — {formatSemester(result.semester)}</p>
             </div>
 
             {/* Student info header */}
@@ -185,7 +210,7 @@ export default function App() {
               <li className="info-item">
                 <Info size={15} className="info-icon" />
                 <span>
-                  SGPA of {result.semester}:{' '}
+                  SGPA of {formatSemester(result.semester)}:{' '}
                   <strong className="sgpa-inline">{Number(result.sgpa).toFixed(2)}</strong>
                 </span>
               </li>
